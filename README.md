@@ -45,7 +45,6 @@ Program umożliwia symulowanie działania dźwigu.
 
 
 ## Błędy i miejsce na poprawki
-- W programie czasami występuje błąd alokacji pamięci podczas korzystania z okienka tekstowego.
 - Możliwość udoskonalenia wyglądu dźwigu.
 - Możliwość dodania komunikatu o zbyt dużym ciężarze obiektu.
 
