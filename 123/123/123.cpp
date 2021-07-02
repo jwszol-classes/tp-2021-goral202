@@ -13,10 +13,10 @@
 
 
 using namespace Gdiplus;
-//int limit = 1000;
+
 
 bool dzwig = true;
-int waga = 5000;
+int waga = 4999;
 LPWSTR WAGA;
 HWND hText;
 DWORD dlugosc;
@@ -130,8 +130,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // Przechowuj dojście wystąpienia w naszej zmiennej globalnej
-   //HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-     //  CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr); 
+    
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
@@ -152,11 +151,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       650, 70, 150, 30, hWnd, (HMENU)ID_3, hInstance, NULL);
   przycisk4 = CreateWindowEx(0, L"BUTTON", L"PRAWA ", WS_CHILD | WS_VISIBLE,
       800, 70, 150, 30, hWnd, (HMENU)ID_4, hInstance, NULL);
-  /*DWORD dlugosc = GetWindowTextLength(hText);
-  LPWSTR Bufor = (LPWSTR)GlobalAlloc(GPTR, dlugosc + 1);
-  GetWindowText(hText, Bufor, dlugosc + 1);
-  waga = (int)Bufor;
-  WAGA = Bufor;*/
+ 
   
    
 
@@ -198,7 +193,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
    
        
-        //MessageBox(hWnd, WAGA, L"Ha!", MB_ICONINFORMATION);
+        
         
             int wmId = LOWORD(wParam);
             // Analizuj zaznaczenia menu:
@@ -267,7 +262,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     full = false;
                 }
 
-                //MessageBox(hWnd, WAGA, L"Ha!", MB_ICONINFORMATION); 
+                 
                 InvalidateRect(hWnd, 0, TRUE);
                 break;
             case ID_4:
@@ -287,7 +282,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     full = false;
                 }
 
-                //MessageBox(hWnd, WAGA, L"Ha!", MB_ICONINFORMATION); 
+                 
                 InvalidateRect(hWnd, 0, TRUE);
                 break;
             default:
